@@ -68,6 +68,19 @@ html {
   color: var(--whiteWords);
 }
 
+.appContainer footer a {
+  text-decoration: none;
+  color: var(--whiteWords);
+  border-bottom: 1px solid transparent;
+  transition: 0.38s ease all;
+}
+
+.appContainer footer a:hover {
+  color: var(--whiteWords);
+  font-weight: bold;
+  border-bottom: 1px solid var(--whiteWords);
+}
+
 @media only screen and (max-width: 680px) {
   .appContainer footer {
     gap: 0;
