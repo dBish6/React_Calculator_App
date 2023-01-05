@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "Digital-7";
+  src: url(./assets/digital-7.ttf);
+}
+
+@font-face {
+  font-family: "Gorga Grotesque";
+  src: url(./assets/Gorga_Grotesque_Regular.otf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+/* Globals */
+:root {
+  --background: #0a0d1d;
+  --whiteWords: rgb(255, 255, 255, 0.9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font-family: "Montserrat";
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background);
+}
+
+.appContainer {
+  min-height: 100vh;
+  margin: 0;
+
+  display: grid;
+  grid-template-rows: 100px 1fr auto;
+  place-items: center;
+}
+
+.appContainer header {
+  display: flex;
+  justify-self: center;
+  text-align: center;
+
+  color: var(--whiteWords);
+}
+
+.appContainer footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  min-height: 50px;
+  width: 100vw;
+
+  background: #141e36;
+  border-top: 3px solid #112857;
+  color: var(--whiteWords);
+}
+
+@media only screen and (max-width: 680px) {
+  .appContainer footer {
+    gap: 0;
+    flex-direction: column;
+  }
+}
+
+/* <=============================================/ Calculator Start \=============================================> */
+
+.calContainer {
+  margin: 2rem;
+  width: 100%;
+  max-width: 20rem;
+  /* min-height: 500px; */
+  /* overflow: hidden; */
+  box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.35);
+  /* box-shadow: 0px 2px 64px rgba(255, 255, 255, 0.35); */
+}
+
+.calContainer .calScreen {
+  background-color: #141e36;
+  /* background: linear-gradient(rgb(237, 255, 8, 0.8), rgba(169, 254, 57, 0.8)); */
+  /* background: none; */
+  color: var(--whiteWords);
+  /* box-shadow: 0px -4px 28px 3px rgba(169, 254, 57, 0.8); */
+  border: 2px solid black;
+  outline: 2px solid gray;
+  outline-offset: -4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0.5rem;
+  min-height: 68px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.calContainer .calScreen .currentOperand p {
+  font-family: "Digital-7";
+  font-size: 2.5rem;
+}
+
+.calContainer .calScreen .previousOperand p {
+  font-family: "Digital-7";
+  font-size: 1.5rem;
+}
+
+.calContainer .buttonsContainer {
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.calContainer .buttonsContainer button {
+  cursor: pointer;
+  padding: 1rem;
+  font-family: "Gorga Grotesque";
+  font-size: 1.3rem;
+  background-color: #8e39fe;
+  background-color: rgba(166, 166, 166, 0.2);
+  color: var(--whiteWords);
+  border: 2px outset black;
+  transition: 0.38s ease;
+  /* max-width: 87px; */
+}
+
+.calContainer .buttonsContainer button:hover {
+  background-color: #8097d0;
+}
+
+.calContainer .buttonsContainer button:active {
+  opacity: 0.25;
+  border-width: 1px;
+  position: relative;
+  top: 2px;
+}
+
+.calContainer .buttonsContainer .operator {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.calContainer .buttonsContainer .clearBtn,
+.calContainer .buttonsContainer .clearBtn:hover {
+  background-color: rgb(227, 215, 37);
+}
+
+.calContainer .buttonsContainer .deleteBtn,
+.calContainer .buttonsContainer .deleteBtn:hover {
+  background-color: #fe3946;
+}
+
+.calContainer .buttonsContainer div {
+  display: flex;
+}
+
+.calContainer .buttonsContainer div button {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 87px;
+}
+
+.calContainer .buttonsContainer div .spanBtn1 {
+  flex-basis: 133px;
+}
+
+.calContainer .buttonsContainer div .spanBtn2 {
+  flex-basis: 180px;
+  /* background-color: rgb(227, 215, 37); */
+  /* background-color: #edff08; */
+}
