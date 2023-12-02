@@ -5,8 +5,6 @@ on:
   # Runs on pushes targeting the default branch that's only related to the front-end folder.
   push:
     branches: ["master"]
-    paths:
-      - "react_calculator_reducer/**" 
 
   # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
@@ -41,6 +39,7 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
+          cache-dependency-path: "react_calculator_reducer/package-lock.json"
 
       - name: Build App
         run: |
