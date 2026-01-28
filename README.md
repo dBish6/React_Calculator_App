@@ -7,4 +7,4 @@ This version of the calculator app uses the `useReducer` hook from React to mana
 ## react_calculator_states
 This version of the calculator app uses the `useState` hook from React to manage the state of the application. While this approach can work well for simpler applications, the react_calculator_states version was not fully finished because I found that useReducer was a more appropriate tool for handling multiple actions and complex state changes.
 
-_This calculator app is also featured on my portfolio; [davidbishop.info](https://www.davidbishop.info)._
+_This calculator app is also featured on my portfolio; [https://github.com/dBish6/Portfolio](https://github.com/dBish6/Portfolio)._
